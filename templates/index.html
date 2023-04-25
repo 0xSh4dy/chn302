@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .inp {
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Multi-Stage Distillation</h2>
+    <form action="/calculate" method="post">
+        <input class="inp" type="text" name="feed_conc" placeholder="Feed concentration">
+        <input class="inp" type="text" name="feed_flowrate" placeholder="Feed flowrate">
+        <input class="inp" type="text" name="feed_temperature" placeholder="Feed temperature">
+        <input class="inp" type="text" name="feed_location" placeholder="Feed location">
+        <input class="inp" type="text" name="pressure" placeholder="Pressure">
+        <input class="inp" type="text" name="distillate" placeholder="Distillate">
+        <input class="inp" type="text" name="no_trays" placeholder="No. of trays">
+        <input class="inp" type="text" name="reflux" placeholder="Reflux ratio">
+        <input class="inp" type="text" name="type" placeholder="Type of condenser (0 for partial and 1 for total)">
+        <input type="submit" value="Submit" class="inp">
+    </form>
+</body>
+</html>
