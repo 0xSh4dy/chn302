@@ -31,8 +31,8 @@ Vj=[]
 
 
 def solve(Feed_conc,Feed_temperature,Pressure,feed_flowrate,feed_location,Distilate,No_trays,Type,Reflux):
-    nc = 1
-    Feed_conc = [float(Feed_conc)]
+    nc = 3
+    Feed_conc = [float(Feed_conc),0.3,0.4]
     feed_location = int(feed_location)
     feed_flowrate = float(feed_flowrate)
     Feed_temperature = float(Feed_temperature)
@@ -283,8 +283,9 @@ def solve(Feed_conc,Feed_temperature,Pressure,feed_flowrate,feed_location,Distil
         Vj=Vj_new
         Vj_new=step7()
         Tj_new=step6()
-    Vj_new = [1.05*i for i in Vj_new]
-    Tj_new = [1.05*i for i in Tj_new]
+    print(Vj_new,Tj_new)
+    # Vj_new = [1.05*i for i in Vj_new]
+    # Tj_new = [1.05*i for i in Tj_new]
     return Vj_new,Tj_new
 
 # solve('10','100','100','4','3','3','4','1','3')
